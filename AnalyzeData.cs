@@ -36,7 +36,8 @@ namespace EmployeeNavigatorDataStructures
             var timeStamp2 = _ManipulateData.ConvertToDictionarySelectOneByKeyAndReturnTimeStamp(data);
 
             // Q. What type of function is this?
-            // Q. Are the timestamps equal?  Why or why not?
+            // Q. Are the timestamps equal?  Why or why not? 
+            // They are now because I removed the yield statement from the comparison code, that was keeping things from working.
             var areTimeStampsEqual = _CompareData.CompareStrings(timeStamp1, timeStamp2);
             _DisplayData.DisplayStringComparison(timeStamp1, timeStamp2, areTimeStampsEqual);
 

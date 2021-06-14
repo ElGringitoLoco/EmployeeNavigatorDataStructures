@@ -13,13 +13,16 @@ namespace EmployeeNavigatorDataStructures.HelperMethods
 		/// <returns>List of simple records</returns>
 		public IEnumerable<SimpleRecord> GetItems()
 		{
+			var listOfRecords = new List<SimpleRecord>();
+
 			for (char c = 'A'; c <= 'z'; c++)
 			{
-				yield return
+				listOfRecords.Add(
 					new SimpleRecord(c.ToString(),
 							 DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff"),
-							 Guid.NewGuid().ToString());
+							 Guid.NewGuid().ToString()));
 			}
+			return listOfRecords;
 		}
 	}
 }
